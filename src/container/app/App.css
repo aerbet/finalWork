@@ -1,0 +1,64 @@
+.mainDiv {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.orderDetails,
+.foodList {
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin: 50px 50px;
+}
+
+.orderDetails {
+  max-width: 250px;
+  max-height: 650px;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.foodList {
+  grid-template-columns: auto auto;
+  padding: 15px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.main_block {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+#block,
+.orderItem,
+.total{
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px 0px rgba(50, 50, 50, 0.75);
+  border: 1px solid gainsboro;
+  margin: 10px;
+  padding: 20px;
+  background: #31274a;
+}
+.total {
+  font-weight: 600;
+}
+
+.foodTitle {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Hamburger, .FishSandwich, .Tea, .Fries, .Coffee, .Cola {
+  cursor: pointer;
+}
+
+.ClearBtn {
+  display: block;
+  margin: 0 auto;
+}

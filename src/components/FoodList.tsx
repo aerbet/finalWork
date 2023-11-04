@@ -9,7 +9,7 @@ interface FoodListProps {
 const FoodList: React.FC<FoodListProps> = ({ onAddItem, foodArr }) => {
     return (
         <div className="foodList">
-            <p>Food List</p>
+            <p className="foodTitle">Food List</p>
             <div className="main_block">
                 {foodArr.map((item, index) => (
                     <FoodItem

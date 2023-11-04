@@ -7,15 +7,22 @@ interface OrderDetailsProps {
         part1: string;
         part2: string;
     };
-    orderList: OrderItems[];
+    orderList:  OrderItem[];
     deleteItem: (itemName: string) => void;
     total: number;
+    clearOrder: () => void;
 }
 
-const OrderDetails: React.FC<OrderDetailsProps> = ({ sign, orderList, deleteItem, total }) => {
+interface OrderItem {
+    name: string;
+    price: number;
+    count: number;
+}
+
+const OrderDetails: React.FC<OrderDetailsProps> = ({ sign, orderList, deleteItem, total, clearOrder }) => {
     return (
         <div className="orderDetails">
-            <p>Order Details</p>
+            <p>Order Details:</p>
             <div className="sign">
                 {sign.part1}
                 <p>{sign.part2}</p>
@@ -28,8 +35,8 @@ const OrderDetails: React.FC<OrderDetailsProps> = ({ sign, orderList, deleteItem
                 />
             ))}
             <Total total={total} />
+            <button className="ClearBtn" onClick={clearOrder}>Clear Order</button>
         </div>
     );
 };
-
 export default OrderDetails;
